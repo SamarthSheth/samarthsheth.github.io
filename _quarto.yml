@@ -1,0 +1,57 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Samarth Sheth"
+  description: "math, coding, and quantitative projects."
+  site-url: "https://samarthsheth.github.io"
+  repo-url: "https://github.com/SamarthSheth/samarthsheth.github.io"
+
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: projects/index.qmd
+        text: Projects
+      - href: blog/index.qmd
+        text: Writing
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/SamarthSheth
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/samarth-sheth/
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:samarth.sheth@hotmail.com
+        aria-label: Email
+
+  page-footer:
+    border: false
+    left: "© 2026 Samarth Sheth"
+    right: "[Source](https://github.com/SamarthSheth/samarthsheth.github.io) · Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: [pandoc, styles.scss]
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    code-block-bg: true
+    code-block-border-left: false
+    fig-cap-location: bottom
+    html-math-method: katex
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-newwindow: true
+    link-external-icon: false
+    citations-hover: true
+    footnotes-hover: true

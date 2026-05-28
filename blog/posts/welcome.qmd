@@ -1,0 +1,17 @@
+---
+title: "Hello"
+date: "2026-05-27"
+categories: [meta]
+description: "A short note on why this site exists."
+---
+
+I needed a place to dump expository notes, project write-ups, and the occasional half-formed thought. Twitter is not that place. This is.
+
+Topics I expect to write about:
+
+- 1
+- 2
+- 3
+- 4
+
+

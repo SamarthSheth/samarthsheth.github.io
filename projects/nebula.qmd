@@ -1,0 +1,56 @@
+---
+title: "Nebula"
+subtitle: "Semantic movie recommender with contrastive fine-tuning"
+date: "2025-09-01"
+categories: [machine-learning, retrieval, full-stack]
+description: "Contrastive fine-tuning of a sentence encoder for movie recommendation; +80.6% NDCG@10 with an EXPAND+RERANK pipeline."
+image: /assets/projects/nebula-thumb.png
+format:
+  html:
+    toc: true
+    code-fold: false
+---
+
+[Live demo](https://nebula-demo.example.com) · [GitHub](https://github.com/SamarthSheth/nebula)
+
+## What it is
+
+Nebula is a semantic movie recommender. Given a free-form query — *"a quiet, slow-burn neo-noir with a melancholy color palette"* — it returns a ranked list of films whose plot summaries and metadata best match the query in embedding space.
+
+## Why it's interesting
+
+Off-the-shelf sentence encoders (e.g. `all-MiniLM-L6-v2`) produce embeddings that are *generally* good but not tuned for the geometry of "films users actually consider similar." I fine-tuned the encoder with a contrastive objective using **InfoNCE loss** and **FAISS-based hard-negative mining**, then layered an **EXPAND+RERANK** pipeline on top at query time.
+
+End result: **+9.4% NDCG@10** from fine-tuning alone, **+80.6% NDCG@10** with EXPAND+RERANK over the base encoder.
+
+## The loss
+
+For a batch of $N$ query–positive pairs $\{(q_i, d_i^+)\}_{i=1}^N$, the InfoNCE loss is
+
+$$
+\mathcal{L}_{\text{InfoNCE}} = -\frac{1}{N} \sum_{i=1}^{N} \log \frac{\exp(\mathrm{sim}(q_i, d_i^+)/\tau)}{\sum_{j=1}^{N} \exp(\mathrm{sim}(q_i, d_j)/\tau)}
+$$
+
+where $\mathrm{sim}(\cdot,\cdot)$ is cosine similarity and $\tau$ is a temperature hyperparameter. In-batch negatives are cheap but weak; FAISS hard-negative mining replaces some of them with high-similarity-but-wrong-label documents, pushing the encoder to make finer distinctions.
+
+## The pipeline
+
+1. **EXPAND.** The raw query is rewritten by a small LM into 3–5 paraphrases capturing different facets (mood, plot, era, style). Each paraphrase is independently embedded.
+2. **Retrieve.** Each query embedding pulls top-$k$ candidates from a FAISS index over fine-tuned movie embeddings; results are union'd.
+3. **RERANK.** Candidates are re-scored by a cross-encoder on `(query, document)` pairs and sorted.
+
+## Stack
+
+- **Backend.** FastAPI · Python · PyTorch · `sentence-transformers` · FAISS
+- **Frontend.** React (Vite) · Tailwind
+- **Deploy.** Railway (API) · Vercel (frontend)
+
+## What I'd do differently
+
+- Move from MiniLM to a stronger base encoder (e.g. `bge-small-en-v1.5`) — the architecture is the same, the ceiling is higher.
+- Use **distillation from a cross-encoder** instead of mining hard negatives by similarity alone. The cross-encoder already knows which negatives are hard *and* informative.
+- Add a learning-to-rank head trained on dwell-time or click data once there's traffic.
+
+## Repository
+
+[github.com/SamarthSheth/nebula](https://github.com/SamarthSheth/nebula)

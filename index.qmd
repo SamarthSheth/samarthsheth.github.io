@@ -1,0 +1,40 @@
+---
+title: "Samarth Sheth"
+subtitle: ""
+pagetitle: "Samarth Sheth"
+page-layout: article
+toc: false
+include-in-header:
+  text: |
+    <script>document.addEventListener("DOMContentLoaded", () => document.body.classList.add("page-home"));</script>
+---
+
+::: {.home-simple}
+
+::: {.home-text}
+# Samarth Sheth
+
+I'm finishing an M.S. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad.
+
+I’m interested in probability, markets, mathematical writing, and software that makes technical ideas easier to explore.
+
+
+<!-- 
+::: {.home-links}
+[Projects](projects/index.qmd)  
+[Writing](blog/index.qmd)  
+[CV](cv.qmd)  
+[GitHub](https://github.com/SamarthSheth)  
+[LinkedIn](https://www.linkedin.com/in/samarth-sheth/)  
+[Email](mailto:samarth.sheth@hotmail.com)
+:::
+
+-->
+:::
+
+::: {.home-photo-wrap}
+![](images/headshot.jpg){.home-photo}
+:::
+
+
+:::

@@ -1,0 +1,12 @@
+/.quarto/
+/_site/
+/_freeze/
+.DS_Store
+*.log
+
+# Ignore environment / editor stuff
+.vscode/
+.idea/
+*.swp
+
+**/*.quarto_ipynb

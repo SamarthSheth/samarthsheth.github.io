@@ -1,0 +1,76 @@
+---
+title: "Gromov–Witten theory notes"
+subtitle: "Kontsevich's recursion and quantum cohomology of Grassmannians"
+date: "2025-11-15"
+categories: [mathematics, algebraic-geometry]
+description: "Expository notes on stable maps, Gromov–Witten invariants, and the quantum cohomology of Grassmannians."
+image: /assets/projects/gw-thumb.png
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+[PDF](gw-theory-notes.pdf) · [Source (LaTeX)](https://github.com/SamarthSheth/gw-notes)
+
+These are working notes from my M.S. research area. They start from stable maps and build up to Kontsevich's recursion for the number of rational plane curves of degree $d$ passing through $3d-1$ general points, then transition to the small quantum cohomology ring of the Grassmannian.
+
+## Setting
+
+Let $X$ be a smooth projective variety over $\mathbb{C}$, and let $\beta \in H_2(X, \mathbb{Z})$. The moduli space of stable maps from $n$-pointed genus-$g$ curves to $X$ in class $\beta$ is denoted
+
+$$
+\overline{M}_{g,n}(X, \beta).
+$$
+
+This is a Deligne–Mumford stack. When $X = \mathrm{pt}$ and $\beta = 0$, it reduces to the Deligne–Mumford compactification $\overline{M}_{g,n}$ of the moduli of curves.
+
+## Gromov–Witten invariants
+
+For cohomology classes $\gamma_1, \dots, \gamma_n \in H^*(X)$, the Gromov–Witten invariant is
+
+$$
+\langle \gamma_1, \dots, \gamma_n \rangle_{g,\beta}^X
+= \int_{[\overline{M}_{g,n}(X, \beta)]^{\mathrm{vir}}} \mathrm{ev}_1^*(\gamma_1) \cup \cdots \cup \mathrm{ev}_n^*(\gamma_n),
+$$
+
+where $\mathrm{ev}_i : \overline{M}_{g,n}(X, \beta) \to X$ is the $i$-th evaluation map and $[\cdot]^{\mathrm{vir}}$ denotes the virtual fundamental class.
+
+For genus 0 and $X = \mathbb{P}^2$, the number of rational curves of degree $d$ through $3d-1$ general points is
+
+$$
+N_d = \langle [\mathrm{pt}]^{3d-1} \rangle_{0, d}^{\mathbb{P}^2}.
+$$
+
+## Kontsevich's recursion
+
+Kontsevich showed that the $N_d$ satisfy
+
+$$
+N_d = \sum_{\substack{d_1 + d_2 = d \\ d_1, d_2 \geq 1}} N_{d_1} N_{d_2} \left[ d_1^2 d_2^2 \binom{3d-4}{3d_1-2} - d_1^3 d_2 \binom{3d-4}{3d_1-1} \right]
+$$
+
+with $N_1 = 1$. This gives $N_2 = 1$, $N_3 = 12$, $N_4 = 620$, $N_5 = 87304, \dots$
+
+The proof uses the **WDVV equation** on the four-pointed moduli space $\overline{M}_{0,4} \cong \mathbb{P}^1$, where the three boundary points (corresponding to the three ways of splitting four marked points into pairs) impose linear relations on certain integrals.
+
+## Quantum cohomology of $\mathrm{Gr}(k, n)$
+
+For $X = \mathrm{Gr}(k, n)$, the small quantum cohomology ring has a presentation
+
+$$
+QH^*(\mathrm{Gr}(k, n)) \cong \mathbb{Z}[e_1, \dots, e_k, q] / I_q
+$$
+
+where $I_q$ is a deformation of the classical Schubert ideal by the quantum parameter $q$. The Siebert–Tian / Witten presentation realizes this concretely in terms of symmetric functions.
+
+The structure constants in the Schubert basis are the **3-point genus-0 Gromov–Witten invariants** of the Grassmannian, which by a theorem of Buch, Kresch, and Tamvakis equal certain classical intersection numbers on related two-step flag varieties.
+
+## What's in the notes
+
+- Stable maps and the construction of $\overline{M}_{g,n}(X, \beta)$.
+
+
+## References
+
+Standard. Fulton–Pandharipande, Cox–Katz, Hori et al., Buch–Kresch–Tamvakis.

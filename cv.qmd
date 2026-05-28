@@ -1,0 +1,35 @@
+---
+title: "CV"
+---
+
+[Download PDF](cv.pdf){.btn .btn-primary}
+
+::: {.callout-note}
+Drop your `cv.pdf` in the site root and the download button above will pick it up. The HTML summary below is just a quick mirror — keep the PDF authoritative.
+:::
+
+## Education
+
+**M.S. Mathematics**, University of Wisconsin–Madison · *September 2024 - May 2026*
+
+**B.S. Mathematics (Honors) & Physics**, UC Berkeley · *August 2019 - December 2023*
+
+## Selected experience
+
+*(Fill this in.)*
+
+## Selected projects
+- **Poker simulators** — 
+- **Market Making simulation** — 
+- **Nebula** — semantic movie recommender with contrastive fine-tuning; +80.6% NDCG@10. [Details](projects/nebula.qmd).
+- **NGordnet** — Spring Boot + PostgreSQL service over the 176M-row Google Books Ngram corpus. [Details](projects/ngordnet.qmd).
+- **wsh** — POSIX-ish shell in C: REPL, pipelines, builtins, `fork`/`exec`/`dup2`.
+
+## Awards
+
+- **Jane Street Estimathon** — winning team.
+- **UC Berkeley Math** — Departmental Honors
+
+## Skills
+
+Python, C, Java, JavaScript/TypeScript, React, SQL, PyTorch, FastAPI, Spring Boot, Docker, Linux systems programming.

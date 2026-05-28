@@ -1,0 +1,15 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: [date, title]
+  filter-ui: true
+  feed: true
+page-layout: full
+title-block-banner: false
+---
+
+Notes on math, markets, and systems. Mostly unpolished.

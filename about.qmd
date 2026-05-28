@@ -1,0 +1,14 @@
+---
+title: "About"
+---
+
+## Background
+
+I'm finishing an M.S. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.S. in Mathematics (Honors) and Physics at UC Berkeley.
+
+My mathematical interests sit in **algebraic geometry** 
+
+## What I work on outside math:
+
+- **Quantitative finance.** Market making simulator.
+

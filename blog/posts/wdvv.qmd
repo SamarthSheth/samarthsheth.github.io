@@ -1,0 +1,63 @@
+---
+title: "WDVV in one page"
+date: "2026-05-20"
+categories: [math, algebraic-geometry]
+description: "The Witten–Dijkgraaf–Verlinde–Verlinde equation, stripped down."
+---
+
+The WDVV equation is the associativity condition for the **quantum product** on $H^*(X)$. Stripped of context, it's just associativity of a deformed product — but the deformation has geometric content, and the equation it satisfies turns into a recursion for Gromov–Witten invariants.
+
+## The setup
+
+Fix a smooth projective variety $X$. Pick a basis $T_0, T_1, \dots, T_m$ of $H^*(X, \mathbb{Q})$ with $T_0 = 1$. Let
+
+$$
+g_{ab} = \int_X T_a \cup T_b
+$$
+
+be the Poincaré pairing, and let $g^{ab}$ be its inverse. The **genus-0 Gromov–Witten potential** is
+
+$$
+\Phi(t) = \sum_{n \geq 3} \sum_{\beta} \frac{1}{n!} \langle T_{a_1}, \dots, T_{a_n} \rangle_{0, \beta}\, t^{a_1} \cdots t^{a_n} q^{\beta}.
+$$
+
+## The equation
+
+Write $\Phi_{abc} = \partial_a \partial_b \partial_c \Phi$. **WDVV** is:
+
+$$
+\sum_{e, f} \Phi_{abe}\, g^{ef}\, \Phi_{fcd} = \sum_{e, f} \Phi_{ace}\, g^{ef}\, \Phi_{fbd}
+\quad \text{for all } a, b, c, d.
+$$
+
+Equivalently: the product $T_a *_t T_b = \sum_{e,f} \Phi_{abe}\, g^{ef}\, T_f$ is **associative**.
+
+## Why it's true
+
+There's a map $\overline{M}_{0,4} \to \overline{M}_{0,0} \cong \mathrm{pt}$, and $\overline{M}_{0,4} \cong \mathbb{P}^1$. The three boundary points of $\overline{M}_{0,4}$ correspond to the three ways of splitting the four marked points $\{1,2,3,4\}$ into two pairs:
+
+$$
+\{12 \mid 34\}, \quad \{13 \mid 24\}, \quad \{14 \mid 23\}.
+$$
+
+These three boundary divisors are *linearly equivalent* in $\mathrm{Pic}(\mathbb{P}^1) \cong \mathbb{Z}$. Pulling that linear equivalence back through the forgetful map $\overline{M}_{0,n+4}(X, \beta) \to \overline{M}_{0,4}$ and integrating against insertions gives WDVV.
+
+## What it buys you
+
+For $X = \mathbb{P}^2$ with the standard basis $T_0 = 1, T_1 = H, T_2 = H^2$, WDVV with $(a, b, c, d) = (1, 1, 2, 2)$ collapses to a recursion for the numbers $N_d$ of rational curves of degree $d$ through $3d-1$ points:
+
+$$
+N_d = \sum_{d_1 + d_2 = d} N_{d_1} N_{d_2} \left[ d_1^2 d_2^2 \binom{3d-4}{3d_1-2} - d_1^3 d_2 \binom{3d-4}{3d_1-1} \right].
+$$
+
+This is **Kontsevich's formula**. With $N_1 = 1$:
+
+| $d$ | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| $N_d$ | 1 | 1 | 12 | 620 | 87,304 |
+
+The numbers explode fast. $N_2 = 1$ matches the classical fact that five points determine a unique conic; $N_3 = 12$ is harder to see classically.
+
+## Takeaway
+
+WDVV is one equation. It encodes a *lot* — associativity, the boundary geometry of $\overline{M}_{0,4}$, and counts of rational curves all at once. That economy is the appeal of the theory.

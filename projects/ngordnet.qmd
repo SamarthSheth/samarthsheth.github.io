@@ -1,0 +1,32 @@
+---
+title: "NGordnet"
+subtitle: "Google Books Ngram + Princeton WordNet at scale"
+date: "2025-06-01"
+categories: [backend, data-engineering, full-stack]
+description: "Spring Boot + PostgreSQL service processing 176M+ rows of Google Books Ngram V3 data against Princeton WordNet."
+image: /assets/projects/ngordnet-thumb.png
+---
+
+[Demo](https://ngordnet.example.com) · [GitHub](https://github.com/SamarthSheth/ngordnet)
+
+A Spring Boot + PostgreSQL service that joins the **Google Books Ngram V3 corpus** (176M+ rows) with **Princeton WordNet** to answer queries like *"plot the historical frequency of all hyponyms of 'transport'"*.
+
+## What it does
+
+- Ingests Google Ngram V3 (split across files by leading character) and WordNet's noun hierarchy into Postgres.
+- Indexes by `(word, year)` and walks the WordNet DAG to expand a query word to its hyponym set.
+- Returns time-series frequency data ready for plotting.
+
+## Design notes
+
+- **Bulk loading.** Streamed `COPY FROM` instead of `INSERT`, dropped indexes during ingest, rebuilt after. About a 40× speedup vs naive.
+- **Hyponym expansion.** WordNet's IS-A relation is a DAG, not a tree. Cycles don't exist but diamonds do — naive recursion double-counts. Used a recursive CTE with a visited set.
+- **Caching.** Hyponym expansion is pure; cached at the application layer keyed on the synset.
+
+## Stack
+
+Spring Boot · PostgreSQL · Flyway migrations · Docker · Railway.
+
+## Repository
+
+[github.com/SamarthSheth/ngordnet](https://github.com/SamarthSheth/ngordnet)
