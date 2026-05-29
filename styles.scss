@@ -38,7 +38,7 @@ $code-bg: $code-bg;
 /* ---------- Type ---------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -155,6 +155,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: $accent;
 }
 
+
+
 /* ---------- Navbar ---------- */
 
 .navbar {
@@ -165,42 +167,43 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .navbar-brand {
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+  letter-spacing: -0.005em;
+  color: #c2410c !important;
 }
 
 .navbar .nav-link {
-  font-family: "Special Elite", "Courier Prime", "Courier New", monospace;
-  font-size: 1.39rem;
-  letter-spacing: 0.02em;
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.005em;
   padding-left: 0.9rem !important;
   padding-right: 0.9rem !important;
   position: relative;
 
-  /* Metallic-purple gradient */
   background: linear-gradient(
-    135deg,
-    #c9a8ff 0%,
-    #8b5fbf 22%,
-    #5a3a8e 48%,
-    #a883e8 70%,
-    #6d4aa3 100%
+    100deg,
+    #d94f30 0%,
+    #e8893a 28%,
+    #d9a441 52%,
+    #4a9b8e 80%,
+    #2d6e6a 100%
   );
+  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent !important;
 
-  /* Glow */
-  filter: drop-shadow(0 0 6px rgba(155, 110, 220, 0.5));
-
-  background-size: 200% 200%;
-  animation: shimmer 8s ease-in-out infinite;
+  filter: drop-shadow(0 1px 0 rgba(217, 79, 48, 0.08));
+  animation: sun-on-water 14s ease-in-out infinite;
+  transition: filter 0.2s ease;
 }
 
 .navbar .nav-link:hover {
-  filter: drop-shadow(0 0 10px rgba(155, 110, 220, 0.85));
+  filter: drop-shadow(0 1px 2px rgba(217, 79, 48, 0.25));
 }
 
 .navbar .nav-link.active::after {
@@ -209,31 +212,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   left: 0.9rem;
   right: 0.9rem;
   bottom: -0.25rem;
-  height: 1px;
-  background: #8b5fbf;
+  height: 2px;
+  background: linear-gradient(90deg, #d94f30, #e8893a, #4a9b8e);
+  border-radius: 1px;
 }
 
-@keyframes shimmer {
+@keyframes sun-on-water {
   0%, 100% { background-position: 0% 50%; }
   50%      { background-position: 100% 50%; }
-}
-
-.navbar .nav-link:hover {
-  color: $accent !important;
-}
-
-.navbar .nav-link.active {
-  color: $accent !important;
-}
-
-.navbar .nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0.9rem;
-  right: 0.9rem;
-  bottom: -0.25rem;
-  height: 1px;
-  background: $accent;
 }
 
 /* ---------- Title block ---------- */
