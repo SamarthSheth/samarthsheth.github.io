@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
-    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "CV",
-    "section": "",
-    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Notes on math, markets, and systems. Mostly unpolished.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello\n\n\n\nmeta\n\n\n\nA short note on why this site exists.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWDVV in one page\n\n\n\nmath\n\nalgebraic-geometry\n\n\n\nThe Witten–Dijkgraaf–Verlinde–Verlinde equation, stripped down.\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "I’ll talk about my projects here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/wdvv.html",
@@ -63,6 +49,41 @@
     "text": "Takeaway\nWDVV is one equation. It encodes a lot — associativity, the boundary geometry of \\overline{M}_{0,4}, and counts of rational curves all at once. That economy is the appeal of the theory."
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Notes on math, markets, and systems. Mostly unpolished.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello\n\n\n\nmeta\n\n\n\nA short note on why this site exists.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWDVV in one page\n\n\n\nmath\n\nalgebraic-geometry\n\n\n\nThe Witten–Dijkgraaf–Verlinde–Verlinde equation, stripped down.\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "",
+    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
+  },
+  {
     "objectID": "fun.html",
     "href": "fun.html",
     "title": "Samarth Sheth",
@@ -70,18 +91,11 @@
     "text": "Some of my hobbies include bouldering, photography, board games, travelling,being outside, and more!"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "I’ll talk about my projects here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Samarth Sheth",
     "section": "",
-    "text": "Samarth Sheth\nI’m finishing an M.S. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad.\nI’m interested in probability, markets, mathematical writing, and software that makes technical ideas easier to explore."
+    "text": "Samarth Sheth\nI’m finishing an M.A. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad."
   },
   {
     "objectID": "blog/posts/welcome.html",
@@ -89,19 +103,5 @@
     "title": "Hello",
     "section": "",
     "text": "I needed a place to dump expository notes, project write-ups, and the occasional half-formed thought. Twitter is not that place. This is.\nTopics I expect to write about:\n\n1\n2\n3\n4"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Samarth Sheth",
-    "section": "",
-    "text": "I’m finishing an M.S. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.S. in Mathematics (Honors) and Physics at UC Berkeley."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "Samarth Sheth",
-    "section": "",
-    "text": "I’m finishing an M.S. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.S. in Mathematics (Honors) and Physics at UC Berkeley."
   }
 ]
