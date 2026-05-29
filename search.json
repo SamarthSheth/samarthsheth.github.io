@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "",
+    "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Notes on math, markets, and systems. Mostly unpolished.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello\n\n\n\nmeta\n\n\n\nA short note on why this site exists.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWDVV in one page\n\n\n\nmath\n\nalgebraic-geometry\n\n\n\nThe Witten–Dijkgraaf–Verlinde–Verlinde equation, stripped down.\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/wdvv.html",
+    "href": "blog/posts/wdvv.html",
+    "title": "WDVV in one page",
+    "section": "",
+    "text": "The WDVV equation is the associativity condition for the quantum product on H^*(X). Stripped of context, it’s just associativity of a deformed product — but the deformation has geometric content, and the equation it satisfies turns into a recursion for Gromov–Witten invariants."
+  },
+  {
+    "objectID": "blog/posts/wdvv.html#the-setup",
+    "href": "blog/posts/wdvv.html#the-setup",
+    "title": "WDVV in one page",
+    "section": "The setup",
+    "text": "The setup\nFix a smooth projective variety X. Pick a basis T_0, T_1, \\dots, T_m of H^*(X, \\mathbb{Q}) with T_0 = 1. Let\n\ng_{ab} = \\int_X T_a \\cup T_b\n\nbe the Poincaré pairing, and let g^{ab} be its inverse. The genus-0 Gromov–Witten potential is\n\n\\Phi(t) = \\sum_{n \\geq 3} \\sum_{\\beta} \\frac{1}{n!} \\langle T_{a_1}, \\dots, T_{a_n} \\rangle_{0, \\beta}\\, t^{a_1} \\cdots t^{a_n} q^{\\beta}."
+  },
+  {
+    "objectID": "blog/posts/wdvv.html#the-equation",
+    "href": "blog/posts/wdvv.html#the-equation",
+    "title": "WDVV in one page",
+    "section": "The equation",
+    "text": "The equation\nWrite \\Phi_{abc} = \\partial_a \\partial_b \\partial_c \\Phi. WDVV is:\n\n\\sum_{e, f} \\Phi_{abe}\\, g^{ef}\\, \\Phi_{fcd} = \\sum_{e, f} \\Phi_{ace}\\, g^{ef}\\, \\Phi_{fbd}\n\\quad \\text{for all } a, b, c, d.\n\nEquivalently: the product T_a *_t T_b = \\sum_{e,f} \\Phi_{abe}\\, g^{ef}\\, T_f is associative."
+  },
+  {
+    "objectID": "blog/posts/wdvv.html#why-its-true",
+    "href": "blog/posts/wdvv.html#why-its-true",
+    "title": "WDVV in one page",
+    "section": "Why it’s true",
+    "text": "Why it’s true\nThere’s a map \\overline{M}_{0,4} \\to \\overline{M}_{0,0} \\cong \\mathrm{pt}, and \\overline{M}_{0,4} \\cong \\mathbb{P}^1. The three boundary points of \\overline{M}_{0,4} correspond to the three ways of splitting the four marked points \\{1,2,3,4\\} into two pairs:\n\n\\{12 \\mid 34\\}, \\quad \\{13 \\mid 24\\}, \\quad \\{14 \\mid 23\\}.\n\nThese three boundary divisors are linearly equivalent in \\mathrm{Pic}(\\mathbb{P}^1) \\cong \\mathbb{Z}. Pulling that linear equivalence back through the forgetful map \\overline{M}_{0,n+4}(X, \\beta) \\to \\overline{M}_{0,4} and integrating against insertions gives WDVV."
+  },
+  {
+    "objectID": "blog/posts/wdvv.html#what-it-buys-you",
+    "href": "blog/posts/wdvv.html#what-it-buys-you",
+    "title": "WDVV in one page",
+    "section": "What it buys you",
+    "text": "What it buys you\nFor X = \\mathbb{P}^2 with the standard basis T_0 = 1, T_1 = H, T_2 = H^2, WDVV with (a, b, c, d) = (1, 1, 2, 2) collapses to a recursion for the numbers N_d of rational curves of degree d through 3d-1 points:\n\nN_d = \\sum_{d_1 + d_2 = d} N_{d_1} N_{d_2} \\left[ d_1^2 d_2^2 \\binom{3d-4}{3d_1-2} - d_1^3 d_2 \\binom{3d-4}{3d_1-1} \\right].\n\nThis is Kontsevich’s formula. With N_1 = 1:\n\n\n\nd\n1\n2\n3\n4\n5\n\n\n\n\nN_d\n1\n1\n12\n620\n87,304\n\n\n\nThe numbers explode fast. N_2 = 1 matches the classical fact that five points determine a unique conic; N_3 = 12 is harder to see classically."
+  },
+  {
+    "objectID": "blog/posts/wdvv.html#takeaway",
+    "href": "blog/posts/wdvv.html#takeaway",
+    "title": "WDVV in one page",
+    "section": "Takeaway",
+    "text": "Takeaway\nWDVV is one equation. It encodes a lot — associativity, the boundary geometry of \\overline{M}_{0,4}, and counts of rational curves all at once. That economy is the appeal of the theory."
+  },
+  {
+    "objectID": "fun.html",
+    "href": "fun.html",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "Some of my hobbies include bouldering, photography, board games, travelling,being outside, and more!"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "I’ll talk about my projects here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "Samarth Sheth\nI’m finishing an M.S. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad.\nI’m interested in probability, markets, mathematical writing, and software that makes technical ideas easier to explore."
+  },
+  {
+    "objectID": "blog/posts/welcome.html",
+    "href": "blog/posts/welcome.html",
+    "title": "Hello",
+    "section": "",
+    "text": "I needed a place to dump expository notes, project write-ups, and the occasional half-formed thought. Twitter is not that place. This is.\nTopics I expect to write about:\n\n1\n2\n3\n4"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "I’m finishing an M.S. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.S. in Mathematics (Honors) and Physics at UC Berkeley."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "I’m finishing an M.S. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.S. in Mathematics (Honors) and Physics at UC Berkeley."
+  }
+]
