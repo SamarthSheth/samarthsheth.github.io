@@ -1,5 +1,6 @@
 ---
 title: "Gromov–Witten theory notes"
+draft: true
 subtitle: "Kontsevich's recursion and quantum cohomology of Grassmannians"
 date: "2025-11-15"
 categories: [mathematics, algebraic-geometry]

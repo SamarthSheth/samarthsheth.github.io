@@ -1,19 +1,21 @@
 ---
 title: "CV"
 ---
-
+<!--
 [Download PDF](cv.pdf){.btn .btn-primary}
 
 ::: {.callout-note}
 Drop your `cv.pdf` in the site root and the download button above will pick it up. The HTML summary below is just a quick mirror — keep the PDF authoritative.
 :::
+-->
 
 ## Education
 
-**M.S. Mathematics**, University of Wisconsin–Madison · *September 2024 - May 2026*
+**M.A. Mathematics**, University of Wisconsin–Madison
 
-**B.S. Mathematics (Honors) & Physics**, UC Berkeley · *August 2019 - December 2023*
+**B.S. Mathematics (Honors) & Physics**, University of California, Berkeley <!--·--> 
 
+<!--
 ## Selected experience
 
 *(Fill this in.)*
@@ -33,3 +35,5 @@ Drop your `cv.pdf` in the site root and the download button above will pick it u
 ## Skills
 
 Python, C, Java, JavaScript/TypeScript, React, SQL, PyTorch, FastAPI, Spring Boot, Docker, Linux systems programming.
+
+-->

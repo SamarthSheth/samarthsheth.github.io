@@ -1,8 +1,9 @@
 ---
 title: "Nebula"
+draft: true
 subtitle: "Semantic movie recommender with contrastive fine-tuning"
 date: "2025-09-01"
-categories: [machine-learning, retrieval, full-stack]
+categories: [machine-learning]
 description: "Contrastive fine-tuning of a sentence encoder for movie recommendation; +80.6% NDCG@10 with an EXPAND+RERANK pipeline."
 image: /assets/projects/nebula-thumb.png
 format:

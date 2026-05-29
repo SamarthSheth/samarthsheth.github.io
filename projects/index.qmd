@@ -15,4 +15,4 @@ page-layout: full
 title-block-banner: false
 ---
 
-A collection of things I've built — software, research notes, and quantitative experiments. Click into any project for full write-ups.
+I'll talk about my projects here!

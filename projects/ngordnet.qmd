@@ -1,8 +1,9 @@
 ---
 title: "NGordnet"
+draft: true
 subtitle: "Google Books Ngram + Princeton WordNet at scale"
 date: "2025-06-01"
-categories: [backend, data-engineering, full-stack]
+categories: [backend]
 description: "Spring Boot + PostgreSQL service processing 176M+ rows of Google Books Ngram V3 data against Princeton WordNet."
 image: /assets/projects/ngordnet-thumb.png
 ---

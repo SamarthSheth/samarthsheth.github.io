@@ -13,14 +13,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
       - href: projects/index.qmd
         text: Projects
       - href: blog/index.qmd
         text: Writing
       - href: cv.qmd
         text: CV
+      - href: fun.qmd
+        text: Fun  
     right:
       - icon: github
         href: https://github.com/SamarthSheth
