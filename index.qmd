@@ -14,10 +14,9 @@ include-in-header:
 ::: {.home-text}
 # Samarth Sheth
 
-I'm finishing an M.S. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad.
+I'm finishing an M.A. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad.
 
-I’m interested in probability, markets, mathematical writing, and software that makes technical ideas easier to explore.
-
+<!-- maybe talk about interests -->
 
 <!-- 
 ::: {.home-links}
