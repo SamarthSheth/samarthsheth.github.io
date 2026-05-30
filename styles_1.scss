@@ -1,0 +1,899 @@
+/*-- scss:defaults --*/
+
+// ===========================================================================
+// FONTS
+// ===========================================================================
+$font-family-serif: "Newsreader", "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
+$font-family-sans-serif: $font-family-serif;
+$font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+$font-family-navbar: "Fraunces", serif;
+
+// ===========================================================================
+// PALETTE — warm paper + ink + sunset accent
+// ===========================================================================
+$body-bg: #fbfaf7;
+$body-color: #1a1816;
+$muted: #6e655a;
+$rule: #d9d2c5;
+$accent: #a8341a;
+$accent-hover: #7a2412;
+$code-bg: #f1ede4;
+$brand-coral: #c2410c;
+
+// Bootstrap variable overrides
+$link-color: $body-color;
+$link-decoration: underline;
+$link-hover-color: $accent;
+$primary: $accent;
+$body-secondary: $muted;
+$border-color: $rule;
+
+// Spacing
+$paragraph-margin-bottom: 1.1rem;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+$line-height-base: 1.65;
+$font-size-base: 1.125rem;
+
+// Code
+$code-color: $body-color;
+
+/*-- scss:rules --*/
+
+// ===========================================================================
+// FONT IMPORTS (single set, used by both light and dark mode)
+// ===========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+// ===========================================================================
+// BASE TYPOGRAPHY
+// ===========================================================================
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $font-family-serif;
+  font-feature-settings: "kern", "liga", "onum" 1;
+  font-optical-sizing: auto;
+  background: $body-bg;
+  color: $body-color;
+}
+
+p, li {
+  font-feature-settings: "kern", "liga", "onum" 1;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif;
+  font-feature-settings: "kern", "liga", "lnum" 1;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.65rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $rule;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.subtitle, p.subtitle {
+  font-style: italic;
+  font-weight: 400;
+  color: $muted;
+  font-size: 1.2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0;
+}
+
+// ===========================================================================
+// LAYOUT
+// ===========================================================================
+main.content,
+.quarto-title-block,
+#title-block-header {
+  max-width: 42rem;
+}
+
+.page-layout-full main.content {
+  max-width: 64rem;
+}
+
+main.content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+// ===========================================================================
+// LINKS
+// ===========================================================================
+a {
+  color: $body-color;
+  text-decoration: underline;
+  text-decoration-color: rgba(168, 52, 26, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 0.12s ease, text-decoration-color 0.12s ease;
+}
+
+a:hover {
+  color: $accent;
+  text-decoration-color: $accent;
+}
+
+.navbar a,
+.nav-link,
+.nav-footer a,
+.quarto-listing a,
+.about-link,
+.about-links a,
+.aa-DetachedSearchButton,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.quarto-listing a:hover .listing-title {
+  color: $accent;
+}
+
+// ===========================================================================
+// NAVBAR — gradient text links
+// ===========================================================================
+.navbar {
+  background: $body-bg !important;
+  border-bottom: 1px solid $rule;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.navbar-brand {
+  font-family: $font-family-navbar;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 50, "WONK" 1;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: $brand-coral !important;
+}
+
+// Text nav links (Home / Projects / Writing / CV / Fun) get the sunset gradient.
+// Scoped to .navbar-nav so right-side icon links don't pick it up.
+.navbar .navbar-nav > .nav-item > .nav-link {
+  font-family: $font-family-navbar;
+  font-weight: 500;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-size: 1.4rem;
+  letter-spacing: 0.005em;
+  padding-left: 0.9rem !important;
+  padding-right: 0.9rem !important;
+  position: relative;
+
+  background: linear-gradient(
+    100deg,
+    #d94f30 0%,
+    #e8893a 28%,
+    #d9a441 52%,
+    #4a9b8e 80%,
+    #2d6e6a 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+
+  filter: drop-shadow(0 1px 0 rgba(217, 79, 48, 0.08));
+  animation: sun-on-water 14s ease-in-out infinite;
+  transition: filter 0.2s ease;
+}
+
+.navbar .navbar-nav > .nav-item > .nav-link:hover {
+  filter: drop-shadow(0 1px 2px rgba(217, 79, 48, 0.25));
+}
+
+.navbar .navbar-nav > .nav-item > .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: -0.25rem;
+  height: 2px;
+  background: linear-gradient(90deg, #d94f30, #e8893a, #4a9b8e);
+  border-radius: 1px;
+}
+
+@keyframes sun-on-water {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+// ---------------------------------------------------------------------------
+// NAVBAR icons — social, search, color toggle. All Bootstrap icons (.bi)
+// in the navbar must be dark ink in light mode. This selector wins because
+// it directly targets the icon element where color actually applies.
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// NAVBAR ICONS — social + search
+// Keep separate from the color-scheme toggle.
+// ---------------------------------------------------------------------------
+
+// Social/tool links, but NOT the light/dark toggle
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle),
+.navbar .quarto-navbar-tools .nav-link:not(.quarto-color-scheme-toggle) {
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+// Social Bootstrap icons
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle) .bi,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle) .bi::before {
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Search button container
+.navbar .aa-DetachedSearchButton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem 0.75rem !important;
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Search icon wrapper
+.navbar .aa-DetachedSearchButtonIcon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  color: $body-color !important;
+  -webkit-text-fill-color: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: none !important;
+  background-image: none !important;
+  filter: none !important;
+}
+
+// Hide any Quarto/Algolia-provided search SVG so it cannot disappear randomly
+.navbar .aa-DetachedSearchButtonIcon svg,
+.navbar .aa-SubmitIcon {
+  display: none !important;
+}
+
+// Force our own Bootstrap search icon
+.navbar .aa-DetachedSearchButtonIcon::before {
+  content: "\F52A" !important;
+  display: inline-block !important;
+  font-family: "bootstrap-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  color: $body-color !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+  background-image: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Hover
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover .bi,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover .bi::before,
+.navbar .aa-DetachedSearchButton:hover,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon::before {
+  color: $accent !important;
+  -webkit-text-fill-color: $accent !important;
+}
+// ---------------------------------------------------------------------------
+// NAVBAR ICONS — social + search
+// Keep separate from the color-scheme toggle.
+// Do NOT remove background-image from generated icons.
+// ---------------------------------------------------------------------------
+
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle),
+.navbar .quarto-navbar-tools .nav-link:not(.quarto-color-scheme-toggle),
+.navbar .aa-DetachedSearchButton {
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+// Bootstrap/social icon elements
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle) .bi,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle) .bi::before {
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Search button
+.navbar .aa-DetachedSearchButton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem 0.75rem !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Search icon wrapper
+.navbar .aa-DetachedSearchButtonIcon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  color: $body-color !important;
+  -webkit-text-fill-color: $body-color !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Case 1: search icon is SVG
+.navbar .aa-DetachedSearchButtonIcon svg,
+.navbar .aa-DetachedSearchButtonIcon svg *,
+.navbar .aa-SubmitIcon,
+.navbar .aa-SubmitIcon * {
+  color: $body-color !important;
+  fill: $body-color !important;
+  stroke: $body-color !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Case 2: search icon is a background-image / generated pseudo icon
+// Do NOT set background-image: none here.
+.navbar .aa-DetachedSearchButtonIcon::before,
+.navbar .aa-DetachedSearchButtonIcon .bi::before {
+  filter: brightness(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Hover
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover .bi,
+.navbar .quarto-navbar-tools a:not(.quarto-color-scheme-toggle):hover .bi::before,
+.navbar .aa-DetachedSearchButton:hover,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon svg,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon svg * {
+  color: $accent !important;
+  -webkit-text-fill-color: $accent !important;
+  fill: $accent !important;
+  stroke: $accent !important;
+}
+
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon::before,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon .bi::before {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(85%)
+          saturate(2800%) hue-rotate(0deg) brightness(82%) contrast(95%) !important;
+}
+
+// ---------------------------------------------------------------------------
+// COLOR-SCHEME TOGGLE
+// The icon is a background-image SVG on `<i class="bi">::before`, NOT a font
+// glyph, so color/-webkit-text-fill-color do nothing. We must recolor with
+// CSS filters: brightness(0) forces the SVG to render as solid black,
+// and from there we can tint with invert/sepia/hue-rotate.
+// ---------------------------------------------------------------------------
+.navbar a.quarto-color-scheme-toggle,
+.navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  font-weight: normal !important;
+  font-variation-settings: normal !important;
+  letter-spacing: normal !important;
+  color: $body-color !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+  background-image: none !important;
+  filter: none !important;
+  animation: none !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem !important;
+}
+
+// Icon: dark ink in light mode
+.navbar a.quarto-color-scheme-toggle .bi::before {
+  filter: brightness(0) !important;
+}
+
+// Icon hover: tint toward $accent (ink red #a8341a)
+.navbar a.quarto-color-scheme-toggle:hover .bi::before {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(85%)
+          saturate(2800%) hue-rotate(0deg) brightness(82%) contrast(95%) !important;
+}
+
+// ===========================================================================
+// TITLE BLOCK
+// ===========================================================================
+#title-block-header {
+  margin-bottom: 2.5rem;
+}
+
+.quarto-title .title {
+  margin-bottom: 0.25rem;
+}
+
+.quarto-title-meta {
+  color: $muted;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.quarto-title-meta .quarto-title-meta-heading {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+// ===========================================================================
+// CODE
+// ===========================================================================
+code, pre, kbd {
+  font-family: $font-family-monospace;
+  font-feature-settings: "kern" 0, "liga" 0;
+}
+
+code:not(pre code) {
+  background: $code-bg;
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  font-size: 0.88em;
+}
+
+pre {
+  background: $code-bg !important;
+  border: none !important;
+  border-left: 2px solid $rule !important;
+  border-radius: 0 !important;
+  padding: 1rem 1.2rem !important;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+div.sourceCode {
+  background: transparent !important;
+  border: none !important;
+  margin: 1.5rem 0;
+}
+
+// ===========================================================================
+// MATH
+// ===========================================================================
+.katex {
+  font-size: 1.04em;
+}
+
+.katex-display {
+  margin: 1.6em 0 !important;
+  padding-left: 1.2rem;
+  border-left: 2px solid $rule;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex-display > .katex {
+  text-align: left !important;
+}
+
+// ===========================================================================
+// BLOCKQUOTE
+// ===========================================================================
+blockquote {
+  border-left: 2px solid $accent;
+  padding-left: 1.2rem;
+  margin-left: 0;
+  font-style: italic;
+  color: $muted;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+// ===========================================================================
+// TABLES
+// ===========================================================================
+table {
+  font-feature-settings: "kern", "liga", "tnum" 1;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.6rem 1rem 0.6rem 0;
+  border-bottom: 1px solid $rule;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid $body-color;
+}
+
+// ===========================================================================
+// LISTINGS (projects, blog)
+// ===========================================================================
+.quarto-listing-default {
+  margin-top: 2rem;
+}
+
+.quarto-listing-default .listing-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid $rule;
+  align-items: baseline;
+}
+
+.quarto-listing-default .listing-item:first-child {
+  border-top: 1px solid $rule;
+}
+
+.quarto-listing-default .listing-date {
+  color: $muted;
+  font-size: 0.85rem;
+  font-feature-settings: "tnum" 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.quarto-listing-default .listing-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: $body-color;
+  transition: color 0.12s ease;
+}
+
+.quarto-listing-default .listing-subtitle {
+  font-style: italic;
+  color: $muted;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.quarto-listing-default .listing-description {
+  color: $body-color;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.quarto-listing-default .listing-categories {
+  margin-top: 0.5rem;
+}
+
+.quarto-listing-default .listing-category {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $muted;
+  background: transparent;
+  border: 1px solid $rule;
+  border-radius: 0;
+  padding: 0.15rem 0.5rem;
+  margin-right: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.quarto-listing-default .listing-category:hover {
+  color: $accent;
+  border-color: $accent;
+}
+
+.quarto-listing-default .listing-item .thumbnail {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .quarto-listing-default .listing-item {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+// ===========================================================================
+// ABOUT PAGE (trestles template)
+// ===========================================================================
+.about-link {
+  border: 1px solid $rule !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: $body-color !important;
+  padding: 0.4rem 0.9rem !important;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  transition: all 0.15s ease;
+}
+
+.about-link:hover {
+  background: $body-color !important;
+  color: $body-bg !important;
+  border-color: $body-color !important;
+}
+
+.about-link i {
+  margin-right: 0.35rem;
+}
+
+.about-image {
+  border-radius: 50%;
+  filter: grayscale(20%);
+}
+
+// ===========================================================================
+// TOC
+// ===========================================================================
+#TOC, .toc-active {
+  font-size: 0.85rem;
+}
+
+#TOC a {
+  color: $muted;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#TOC a:hover, #TOC a.active {
+  color: $accent;
+}
+
+#toc-title {
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $body-color;
+  margin-bottom: 0.6rem;
+}
+
+// ===========================================================================
+// FOOTER
+// ===========================================================================
+.nav-footer {
+  border-top: 1px solid $rule;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: $muted;
+  margin-top: 4rem;
+}
+
+.nav-footer a {
+  color: $muted;
+}
+
+// ===========================================================================
+// CALLOUTS
+// ===========================================================================
+div.callout {
+  border-radius: 0 !important;
+  border-left: 2px solid $accent !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  background: transparent !important;
+  padding: 0.4rem 0 0.4rem 1.2rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+div.callout .callout-header {
+  background: transparent !important;
+  font-weight: 600;
+  padding: 0 !important;
+}
+
+div.callout .callout-body {
+  padding-top: 0.3rem !important;
+  padding-left: 0 !important;
+}
+
+// ===========================================================================
+// SELECTION
+// ===========================================================================
+::selection {
+  background: $accent;
+  color: $body-bg;
+}
+
+// ===========================================================================
+// HORIZONTAL RULE
+// ===========================================================================
+hr {
+  border: none;
+  border-top: 1px solid $rule;
+  margin: 2.5rem 0;
+}
+
+hr.accent {
+  border-top: none;
+  text-align: center;
+  height: 1rem;
+}
+
+hr.accent::after {
+  content: "❦";
+  color: $accent;
+  font-size: 1.1rem;
+}
+
+// ===========================================================================
+// BUTTONS
+// ===========================================================================
+.btn-primary {
+  background: transparent !important;
+  color: $body-color !important;
+  border: 1px solid $body-color !important;
+  border-radius: 0 !important;
+  padding: 0.4rem 1rem !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.01em;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: $body-color !important;
+  color: $body-bg !important;
+}
+
+// ===========================================================================
+// HOMEPAGE
+// ===========================================================================
+body.page-home main.content,
+body.page-home .quarto-title-block,
+body.page-home #title-block-header {
+  max-width: 980px;
+}
+
+body.page-home main.content {
+  margin-left: clamp(1.25rem, 8vw, 8rem);
+  margin-right: auto;
+  padding-top: 4rem;
+}
+
+body.page-home #title-block-header {
+  display: none;
+}
+
+.home-simple {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) 260px;
+  gap: 3.5rem;
+  align-items: center;
+  max-width: 860px;
+}
+
+.home-text h1 {
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  max-width: 36rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: $body-color;
+}
+
+.home-text .muted {
+  color: $muted;
+}
+
+.home-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  font-size: 1rem;
+}
+
+.home-links a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(168, 52, 26, 0.35);
+}
+
+.home-links a:hover {
+  border-color: $accent;
+}
+
+.home-photo-wrap {
+  width: 260px;
+}
+
+.home-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid $rule;
+  filter: grayscale(10%);
+}
+
+.home-photo-placeholder {
+  width: 260px;
+  aspect-ratio: 4 / 5;
+  border: 1px solid $rule;
+  background:
+    linear-gradient(135deg, rgba(168, 52, 26, 0.08), transparent),
+    $code-bg;
+}
+
+@media (max-width: 760px) {
+  body.page-home main.content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2.5rem;
+  }
+
+  .home-simple {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .home-photo-wrap,
+  .home-photo-placeholder {
+    width: min(260px, 100%);
+  }
+}

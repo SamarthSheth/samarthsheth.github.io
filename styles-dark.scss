@@ -1,0 +1,147 @@
+/*-- scss:rules --*/
+
+@import "styles.scss";
+
+// Force dark mode on regardless of system preference
+html, html:not(.quarto-light) {
+  $dark-bg: #1a1612;
+  $dark-fg: #ede4d3;
+  $dark-muted: #8a7f70;
+  $dark-rule: #3a342c;
+  $dark-code-bg: #252019;
+  $dark-accent: #e8893a;
+
+  body {
+    background: $dark-bg !important;
+    color: $dark-fg !important;
+  }
+
+  .navbar {
+    background: $dark-bg !important;
+    border-bottom-color: $dark-rule !important;
+  }
+  .navbar-brand { color: #e8893a !important; }
+
+  .navbar .nav-link { filter: none; }
+  .navbar .nav-link:hover {
+    filter: drop-shadow(0 1px 3px rgba(232, 137, 58, 0.45));
+  }
+
+  .navbar .navbar-nav .nav-item > .nav-link:has(i),
+  .navbar .navbar-nav .nav-item > .nav-link > i.bi,
+  .quarto-color-scheme-toggle .bi {
+    -webkit-text-fill-color: $dark-fg !important;
+    color: $dark-fg !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 { color: $dark-fg !important; }
+  h2 { border-bottom-color: $dark-rule !important; }
+  .subtitle, p.subtitle, .quarto-title-meta { color: $dark-muted !important; }
+
+  a { color: $dark-fg; text-decoration-color: rgba(232, 137, 58, 0.45); }
+  a:hover { color: $dark-accent; text-decoration-color: $dark-accent; }
+
+  hr { border-top-color: $dark-rule !important; }
+  .nav-footer { border-top-color: $dark-rule !important; color: $dark-muted !important; }
+  .nav-footer a { color: $dark-muted !important; }
+
+  code:not(pre code) { background: $dark-code-bg !important; color: $dark-fg !important; }
+  pre {
+    background: $dark-code-bg !important;
+    border-left-color: $dark-rule !important;
+    color: $dark-fg !important;
+  }
+
+  .katex-display { border-left-color: $dark-rule !important; }
+  .katex { color: $dark-fg !important; }
+
+  blockquote { border-left-color: $dark-accent !important; color: $dark-muted !important; }
+
+  th, td { border-bottom-color: $dark-rule !important; }
+  th { border-bottom-color: $dark-fg !important; }
+
+  .quarto-listing-default .listing-item { border-bottom-color: $dark-rule !important; }
+  .quarto-listing-default .listing-item:first-child { border-top-color: $dark-rule !important; }
+  .quarto-listing-default .listing-date,
+  .quarto-listing-default .listing-subtitle { color: $dark-muted !important; }
+  .quarto-listing-default .listing-title,
+  .quarto-listing-default .listing-description { color: $dark-fg !important; }
+  .quarto-listing-default .listing-category {
+    border-color: $dark-rule !important;
+    color: $dark-muted !important;
+  }
+  .quarto-listing-default .listing-category:hover {
+    color: $dark-accent !important;
+    border-color: $dark-accent !important;
+  }
+
+  .about-link {
+    border-color: $dark-rule !important;
+    color: $dark-fg !important;
+  }
+  .about-link:hover {
+    background: $dark-fg !important;
+    color: $dark-bg !important;
+    border-color: $dark-fg !important;
+  }
+
+  .btn-primary { color: $dark-fg !important; border-color: $dark-fg !important; }
+  .btn-primary:hover { background: $dark-fg !important; color: $dark-bg !important; }
+
+  #TOC a { color: $dark-muted !important; }
+  #TOC a:hover, #TOC a.active { color: $dark-accent !important; }
+  #toc-title { color: $dark-fg !important; }
+
+  div.callout { border-left-color: $dark-accent !important; }
+  div.callout .callout-header { color: $dark-fg !important; }
+
+  ::selection { background: $dark-accent; color: $dark-bg; }
+
+  hr.accent::after { color: $dark-accent !important; }
+
+  .home-photo-placeholder {
+    border-color: $dark-rule !important;
+    background:
+      linear-gradient(135deg, rgba(232, 137, 58, 0.12), transparent),
+      $dark-code-bg !important;
+  }
+  .home-photo { border-color: $dark-rule !important; }
+  .home-text p { color: $dark-fg !important; }
+  .home-links a { border-bottom-color: rgba(232, 137, 58, 0.45) !important; }
+  .home-links a:hover { border-color: $dark-accent !important; }
+  
+  /* ---------- Color-scheme toggle ---------- */
+
+
+    .navbar a.quarto-color-scheme-toggle,
+    .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+    // Neutralize all .nav-link inheritance
+    background: none !important;
+    background-image: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: $dark-fg !important;
+    filter: none !important;
+    animation: none !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+    font-variation-settings: normal !important;
+    letter-spacing: normal !important;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem !important;
+    }
+
+    // The icon SVG — recolor to a warm cream for dark mode.
+    // brightness(0) → pure black, then invert(1) → pure white.
+    // To get a warm off-white instead of pure white, knock brightness down slightly.
+    .navbar a.quarto-color-scheme-toggle .bi::before {
+    filter: brightness(0) invert(1) brightness(0.92) sepia(0.15) !important;
+    }
+
+    .navbar a.quarto-color-scheme-toggle:hover .bi::before {
+    // Tint toward the golden orange $dark-accent
+    filter: brightness(0) saturate(100%) invert(64%) sepia(45%)
+            saturate(700%) hue-rotate(345deg) brightness(96%) contrast(90%) !important;
+    }
+}

@@ -156,6 +156,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
 
 /* ---------- Navbar ---------- */
 
@@ -167,17 +168,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .navbar-brand {
-  font-family: "Caprasimo", serif;
-  font-weight: 400;
-  font-size: 1.35rem;
-  letter-spacing: -0.005em;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 50, "WONK" 1;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
   color: #c2410c !important;
 }
 
 .navbar .nav-link {
-  font-family: "Caprasimo", serif;
-  font-weight: 400;
-  font-size: 1.25rem;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-size: 1.4rem;
   letter-spacing: 0.005em;
   padding-left: 0.9rem !important;
   padding-right: 0.9rem !important;
@@ -661,3 +664,63 @@ body.page-home #title-block-header {
     width: min(260px, 100%);
   }
 }
+
+/* ---------- Navbar icons — light mode ---------- */
+
+// Make sure icons in the right-side navbar render in ink, not gradient
+.navbar .navbar-nav .nav-item > .nav-link:has(i),
+.navbar .navbar-nav .nav-item > .nav-link > i.bi {
+  background: none !important;
+  -webkit-text-fill-color: $body-color !important;
+  color: $body-color !important;
+  filter: none !important;
+  font-family: inherit !important;
+  animation: none !important;
+}
+
+.navbar .navbar-nav .nav-item > .nav-link:has(i):hover,
+.navbar .navbar-nav .nav-item > .nav-link:has(i):hover > i.bi {
+  -webkit-text-fill-color: $accent !important;
+  color: $accent !important;
+}
+
+/* ---------- Color-scheme toggle ---------- */
+
+/* ---------- Color-scheme toggle ---------- */
+
+.navbar a.quarto-color-scheme-toggle,
+.navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+  background: none !important;
+  background-image: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: $body-color !important;
+  filter: none !important;
+  animation: none !important;
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  font-weight: normal !important;
+  font-variation-settings: normal !important;
+  letter-spacing: normal !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem !important;
+}
+
+// Icon stays dark ink — brightness(0) forces pure black on the SVG
+.navbar a.quarto-color-scheme-toggle .bi::before {
+  filter: brightness(0) !important;
+}
+
+.navbar a.quarto-color-scheme-toggle:hover .bi::before {
+  // Tint to $accent (ink red #a8341a)
+  filter: brightness(0) saturate(100%) invert(20%) sepia(85%)
+          saturate(2800%) hue-rotate(0deg) brightness(82%) contrast(95%) !important;
+}
+
+.navbar a.quarto-color-scheme-toggle {
+  font-size: 0 !important;  // hide any stray text content
+}
+.navbar a.quarto-color-scheme-toggle .bi {
+  font-size: 1rem !important;  // restore on the icon container
+}
+

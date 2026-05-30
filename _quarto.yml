@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Samarth Sheth"
+  title: "Samarth"
   description: "math, coding, and quantitative projects."
   site-url: "https://samarthsheth.github.io"
   repo-url: "https://github.com/SamarthSheth/samarthsheth.github.io"
@@ -39,7 +39,9 @@ website:
 
 format:
   html:
-    theme: [pandoc, styles.scss]
+    theme: 
+      light: [pandoc, styles_1.scss]
+      dark: [pandoc, styles-dark_1.scss]
     toc: true
     toc-location: right
     toc-depth: 3

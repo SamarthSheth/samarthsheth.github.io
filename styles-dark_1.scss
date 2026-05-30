@@ -1,0 +1,377 @@
+/*-- scss:defaults --*/
+
+// ===========================================================================
+// DARK PALETTE — inverted warm paper
+// ===========================================================================
+$body-bg: #1a1612;
+$body-color: #ede4d3;
+$muted: #8a7f70;
+$rule: #3a342c;
+$accent: #e8893a;  // golden orange from the sunset gradient
+$accent-hover: #d9a441;
+$code-bg: #252019;
+$brand-coral: #e8893a;
+
+// Bootstrap variable overrides — same names, dark values
+$link-color: $body-color;
+$link-decoration: underline;
+$link-hover-color: $accent;
+$primary: $accent;
+$body-secondary: $muted;
+$border-color: $rule;
+
+// Spacing — IDENTICAL to light mode (zero size changes between modes)
+$paragraph-margin-bottom: 1.1rem;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+$line-height-base: 1.65;
+$font-size-base: 1.125rem;
+
+$code-color: $body-color;
+
+/*-- scss:rules --*/
+
+// ===========================================================================
+// IMPORT the light theme as the base.
+// All typography, layout, sizing, and structural rules come from there.
+// Below we ONLY override colors and the dark-mode-specific icon filters.
+// Nothing here changes any font-size, font-family, or font-weight.
+// ===========================================================================
+@import "styles.scss";
+
+// ===========================================================================
+// COLOR OVERRIDES — apply on top of styles.scss
+// ===========================================================================
+
+body {
+  background: #1a1612 !important;
+  color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// NAVBAR (sizing comes from styles.scss; we only change colors)
+// ---------------------------------------------------------------------------
+.navbar {
+  background: #1a1612 !important;
+  border-bottom-color: #3a342c !important;
+}
+
+.navbar-brand {
+  color: #e8893a !important;
+  // Do NOT redeclare font-family, font-size, or font-weight here.
+}
+
+// Gradient text links — gradient itself stays the same (it's vivid enough
+// for both backgrounds). Only adjust the drop-shadow which was tuned for
+// light bg.
+.navbar .navbar-nav > .nav-item > .nav-link {
+  filter: none;
+}
+.navbar .navbar-nav > .nav-item > .nav-link:hover {
+  filter: drop-shadow(0 1px 3px rgba(232, 137, 58, 0.45));
+}
+
+
+// ---------------------------------------------------------------------------
+// COLOR-SCHEME TOGGLE — only the icon filter changes
+// The selectors below MUST keep the font-size/font-family resets from
+// styles.scss in place. We re-include them with !important to win against
+// any cascade ordering issues, but the values are IDENTICAL to light mode.
+// ---------------------------------------------------------------------------
+.navbar a.quarto-color-scheme-toggle,
+.navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  font-weight: normal !important;
+  font-variation-settings: normal !important;
+  letter-spacing: normal !important;
+  color: #0cdf5d !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+  background-image: none !important;
+  filter: none !important;
+  animation: none !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem !important;
+}
+
+
+// Hover: tint to golden orange ($accent)
+.navbar a.quarto-color-scheme-toggle:hover .bi::before {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(45%)
+          saturate(700%) hue-rotate(345deg) brightness(96%) contrast(90%) !important;
+}
+
+// ---------------------------------------------------------------------------
+// TYPE COLORS (sizes inherited from styles.scss)
+// ---------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  color: #ede4d3 !important;
+}
+h2 {
+  border-bottom-color: #3a342c !important;
+}
+.subtitle, p.subtitle,
+.quarto-title-meta {
+  color: #8a7f70 !important;
+}
+
+// ---------------------------------------------------------------------------
+// LINKS
+// ---------------------------------------------------------------------------
+a {
+  color: #ede4d3;
+  text-decoration-color: rgba(232, 137, 58, 0.45);
+}
+a:hover {
+  color: #e8893a;
+  text-decoration-color: #e8893a;
+}
+.quarto-listing a:hover .listing-title {
+  color: #e8893a;
+}
+
+// ---------------------------------------------------------------------------
+// RULES + FOOTER
+// ---------------------------------------------------------------------------
+hr {
+  border-top-color: #3a342c !important;
+}
+hr.accent::after {
+  color: #e8893a !important;
+}
+
+.nav-footer {
+  border-top-color: #3a342c !important;
+  color: #8a7f70 !important;
+}
+.nav-footer a {
+  color: #8a7f70 !important;
+}
+
+// ---------------------------------------------------------------------------
+// CODE
+// ---------------------------------------------------------------------------
+code:not(pre code) {
+  background: #252019 !important;
+  color: #ede4d3 !important;
+}
+pre {
+  background: #252019 !important;
+  border-left-color: #3a342c !important;
+  color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// MATH
+// ---------------------------------------------------------------------------
+.katex-display {
+  border-left-color: #3a342c !important;
+}
+.katex {
+  color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// BLOCKQUOTE
+// ---------------------------------------------------------------------------
+blockquote {
+  border-left-color: #e8893a !important;
+  color: #8a7f70 !important;
+}
+
+// ---------------------------------------------------------------------------
+// TABLES
+// ---------------------------------------------------------------------------
+th, td {
+  border-bottom-color: #3a342c !important;
+}
+th {
+  border-bottom-color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// LISTINGS
+// ---------------------------------------------------------------------------
+.quarto-listing-default .listing-item {
+  border-bottom-color: #3a342c !important;
+}
+.quarto-listing-default .listing-item:first-child {
+  border-top-color: #3a342c !important;
+}
+.quarto-listing-default .listing-date,
+.quarto-listing-default .listing-subtitle {
+  color: #8a7f70 !important;
+}
+.quarto-listing-default .listing-title,
+.quarto-listing-default .listing-description {
+  color: #ede4d3 !important;
+}
+.quarto-listing-default .listing-category {
+  border-color: #3a342c !important;
+  color: #8a7f70 !important;
+}
+.quarto-listing-default .listing-category:hover {
+  color: #e8893a !important;
+  border-color: #e8893a !important;
+}
+
+// ---------------------------------------------------------------------------
+// ABOUT / BUTTONS
+// ---------------------------------------------------------------------------
+.about-link {
+  border-color: #3a342c !important;
+  color: #ede4d3 !important;
+}
+.about-link:hover {
+  background: #ede4d3 !important;
+  color: #1a1612 !important;
+  border-color: #ede4d3 !important;
+}
+
+.btn-primary {
+  color: #ede4d3 !important;
+  border-color: #ede4d3 !important;
+}
+.btn-primary:hover {
+  background: #ede4d3 !important;
+  color: #1a1612 !important;
+}
+
+// ---------------------------------------------------------------------------
+// TOC
+// ---------------------------------------------------------------------------
+#TOC a {
+  color: #8a7f70 !important;
+}
+#TOC a:hover, #TOC a.active {
+  color: #e8893a !important;
+}
+#toc-title {
+  color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// CALLOUTS
+// ---------------------------------------------------------------------------
+div.callout {
+  border-left-color: #e8893a !important;
+}
+div.callout .callout-header {
+  color: #ede4d3 !important;
+}
+
+// ---------------------------------------------------------------------------
+// SELECTION
+// ---------------------------------------------------------------------------
+::selection {
+  background: #e8893a;
+  color: #1a1612;
+}
+
+// ---------------------------------------------------------------------------
+// HOMEPAGE
+// ---------------------------------------------------------------------------
+.home-photo-placeholder {
+  border-color: #3a342c !important;
+  background:
+    linear-gradient(135deg, rgba(232, 137, 58, 0.12), transparent),
+    #252019 !important;
+}
+.home-photo {
+  border-color: #3a342c !important;
+}
+.home-text p {
+  color: #ede4d3 !important;
+}
+.home-links a {
+  border-bottom-color: rgba(232, 137, 58, 0.45) !important;
+}
+.home-links a:hover {
+  border-color: #e8893a !important;
+}
+
+// ---------------------------------------------------------------------------
+// DARK MODE NAVBAR ICONS — single source of truth
+// Put this at the VERY BOTTOM of dark.scss.
+// ---------------------------------------------------------------------------
+
+$dark-navbar-icon: #ffffff;
+$dark-navbar-icon-hover: #e8893a;
+
+// All navbar tool/icon containers
+.navbar .quarto-navbar-tools,
+.navbar .quarto-navbar-tools a,
+.navbar .quarto-navbar-tools .nav-link,
+.navbar .aa-DetachedSearchButton,
+.navbar .aa-DetachedSearchButtonIcon,
+.navbar a.quarto-color-scheme-toggle {
+  color: $dark-navbar-icon !important;
+  -webkit-text-fill-color: $dark-navbar-icon !important;
+  fill: $dark-navbar-icon !important;
+  stroke: $dark-navbar-icon !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+// Bootstrap icon elements
+.navbar .bi,
+.navbar .bi::before,
+.navbar .quarto-navbar-tools .bi,
+.navbar .quarto-navbar-tools .bi::before,
+.navbar a.quarto-color-scheme-toggle .bi,
+.navbar a.quarto-color-scheme-toggle .bi::before {
+  color: $dark-navbar-icon !important;
+  -webkit-text-fill-color: $dark-navbar-icon !important;
+  fill: $dark-navbar-icon !important;
+  stroke: $dark-navbar-icon !important;
+  opacity: 1 !important;
+}
+
+// Search SVG icons
+.navbar .aa-DetachedSearchButtonIcon svg,
+.navbar .aa-DetachedSearchButtonIcon svg *,
+.navbar .aa-SubmitIcon,
+.navbar .aa-SubmitIcon * {
+  color: $dark-navbar-icon !important;
+  -webkit-text-fill-color: $dark-navbar-icon !important;
+  fill: $dark-navbar-icon !important;
+  stroke: $dark-navbar-icon !important;
+  opacity: 1 !important;
+}
+
+// Pseudo-element icons rendered through background-image
+.navbar .bi::before,
+.navbar a.quarto-color-scheme-toggle .bi::before,
+.navbar .aa-DetachedSearchButtonIcon::before,
+.navbar .aa-DetachedSearchButtonIcon .bi::before {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+// Hover state
+.navbar .quarto-navbar-tools a:hover,
+.navbar .quarto-navbar-tools a:hover .bi,
+.navbar .quarto-navbar-tools a:hover .bi::before,
+.navbar .aa-DetachedSearchButton:hover,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon::before,
+.navbar .aa-DetachedSearchButton:hover svg,
+.navbar .aa-DetachedSearchButton:hover svg *,
+.navbar a.quarto-color-scheme-toggle:hover,
+.navbar a.quarto-color-scheme-toggle:hover .bi,
+.navbar a.quarto-color-scheme-toggle:hover .bi::before {
+  color: $dark-navbar-icon-hover !important;
+  -webkit-text-fill-color: $dark-navbar-icon-hover !important;
+  fill: $dark-navbar-icon-hover !important;
+  stroke: $dark-navbar-icon-hover !important;
+}
+
+// Hover filter for pseudo-element icons
+.navbar a.quarto-color-scheme-toggle:hover .bi::before,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon::before,
+.navbar .aa-DetachedSearchButton:hover .aa-DetachedSearchButtonIcon .bi::before {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(45%)
+          saturate(700%) hue-rotate(345deg) brightness(96%) contrast(90%) !important;
+}
