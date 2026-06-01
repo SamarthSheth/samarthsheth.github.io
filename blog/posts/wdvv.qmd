@@ -3,6 +3,7 @@ title: "WDVV in one page"
 date: "2026-05-20"
 categories: [math, algebraic-geometry]
 description: "The Witten–Dijkgraaf–Verlinde–Verlinde equation, stripped down."
+draft: true
 ---
 
 The WDVV equation is the associativity condition for the **quantum product** on $H^*(X)$. Stripped of context, it's just associativity of a deformed product — but the deformation has geometric content, and the equation it satisfies turns into a recursion for Gromov–Witten invariants.
