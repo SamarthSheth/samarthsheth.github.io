@@ -6,7 +6,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/welcome.html"
+      "/blog/posts/welcome.html",
+      "/blog/posts/Market Microstructure Simulator.html"
     ]
   }
 ]
