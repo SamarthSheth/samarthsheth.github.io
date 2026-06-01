@@ -1,6 +1,6 @@
 ---
 title: "Hello"
-date: "2026-05-27"
+date: "2026-04-01"
 categories: [meta]
 description: "A short note on why this site exists."
 ---
