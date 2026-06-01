@@ -7,39 +7,18 @@
     "text": "I’ll talk about my projects here!\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/posts/welcome.html",
-    "href": "blog/posts/welcome.html",
-    "title": "Hello",
+    "objectID": "blog/posts/Counterfactual Regret Minimization & Poker Simulators.html",
+    "href": "blog/posts/Counterfactual Regret Minimization & Poker Simulators.html",
+    "title": "Counterfactual Regret Minimization & Poker Simulators",
     "section": "",
-    "text": "I’m going to talk about my projects here!"
+    "text": "Coming soon!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Samarth Sheth",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
     "section": "",
-    "text": "Samarth Sheth\nI’m finishing an M.A. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad."
-  },
-  {
-    "objectID": "fun.html",
-    "href": "fun.html",
-    "title": "Samarth",
-    "section": "",
-    "text": "Some of my hobbies include bouldering, photography, board games, travelling,being outside, and more!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Samarth",
-    "section": "",
-    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "Samarth",
-    "section": "",
-    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
+    "text": "Notes on math, markets, and systems. Mostly unpolished.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello\n\n\n\nmeta\n\n\n\nA short note on why this site exists.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMarket Microstructure Simulator\n\n\n\n\n\nA Python simulation of an efficient limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker profits.\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Regret Minimization & Poker Simulators\n\n\n\n\n\nA brief explanation of Counter-Factual Regret Minimzation (CFR) and how it can be used to model Game Theory Optimal (GTO) strategies for various games including rock-paper-scissors and poker along with python simulations opf these.\n\n\n\n\n\nApr 20, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cv.html",
@@ -56,11 +35,39 @@
     "text": "M.A. Mathematics, University of Wisconsin–Madison\nB.S. Mathematics (Honors) & Physics, University of California, Berkeley"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Samarth",
     "section": "",
-    "text": "Notes on math, markets, and systems. Mostly unpolished.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHello\n\n\n\nmeta\n\n\n\nA short note on why this site exists.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMarket Microstructure Simulator\n\n\n\n\n\nA Python simulation of an efficient limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker profits.\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "Samarth",
+    "section": "",
+    "text": "I’m finishing an M.A. in Mathematics at UW–Madison (May 2026). Before that, I completed a B.A. in Mathematics (Honors) and Physics at UC Berkeley."
+  },
+  {
+    "objectID": "fun.html",
+    "href": "fun.html",
+    "title": "Samarth",
+    "section": "",
+    "text": "Some of my hobbies include bouldering, photography, board games, travelling,being outside, and more!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Samarth Sheth",
+    "section": "",
+    "text": "Samarth Sheth\nI’m finishing an M.A. in Mathematics at UW–Madison, after studying Mathematics and Physics at UC Berkeley for my undergrad."
+  },
+  {
+    "objectID": "blog/posts/welcome.html",
+    "href": "blog/posts/welcome.html",
+    "title": "Hello",
+    "section": "",
+    "text": "I’m going to talk about my projects here!"
   },
   {
     "objectID": "blog/posts/Market Microstructure Simulator.html",

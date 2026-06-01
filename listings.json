@@ -7,7 +7,8 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/posts/welcome.html",
-      "/blog/posts/Market Microstructure Simulator.html"
+      "/blog/posts/Market Microstructure Simulator.html",
+      "/blog/posts/Counterfactual Regret Minimization & Poker Simulators.html"
     ]
   }
 ]

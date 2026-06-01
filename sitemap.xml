@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samarthsheth.github.io/projects/index.html</loc>
-    <lastmod>2026-06-01T15:32:28.767Z</lastmod>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
   </url>
   <url>
-    <loc>https://samarthsheth.github.io/blog/posts/welcome.html</loc>
-    <lastmod>2026-06-01T15:32:28.766Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samarthsheth.github.io/index.html</loc>
-    <lastmod>2026-06-01T15:32:28.766Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samarthsheth.github.io/fun.html</loc>
-    <lastmod>2026-06-01T15:32:28.766Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samarthsheth.github.io/about.html</loc>
-    <lastmod>2026-06-01T15:32:28.765Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samarthsheth.github.io/cv.html</loc>
-    <lastmod>2026-06-01T15:32:28.766Z</lastmod>
+    <loc>https://samarthsheth.github.io/blog/posts/Counterfactual Regret Minimization &amp; Poker Simulators.html</loc>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
   </url>
   <url>
     <loc>https://samarthsheth.github.io/blog/index.html</loc>
-    <lastmod>2026-06-01T15:32:28.765Z</lastmod>
+    <lastmod>2026-06-01T15:37:12.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samarthsheth.github.io/cv.html</loc>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samarthsheth.github.io/about.html</loc>
+    <lastmod>2026-06-01T15:37:12.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samarthsheth.github.io/fun.html</loc>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samarthsheth.github.io/index.html</loc>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samarthsheth.github.io/blog/posts/welcome.html</loc>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
   </url>
   <url>
     <loc>https://samarthsheth.github.io/blog/posts/Market Microstructure Simulator.html</loc>
-    <lastmod>2026-06-01T15:32:28.766Z</lastmod>
+    <lastmod>2026-06-01T15:37:12.955Z</lastmod>
   </url>
 </urlset>
