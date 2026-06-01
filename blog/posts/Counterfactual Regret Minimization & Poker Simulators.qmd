@@ -1,0 +1,9 @@
+---
+title: "Counterfactual Regret Minimization & Poker Simulators"
+date: "2026-04-20"
+categories: []
+description: "A brief explanation of Counter-Factual Regret Minimzation (CFR) and how it can be used to model Game Theory Optimal (GTO) strategies for various games including rock-paper-scissors and poker along with python simulations opf these."
+draft: false
+---
+
+Coming soon!
