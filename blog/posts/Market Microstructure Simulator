@@ -2,7 +2,7 @@
 title: "Market Microstructure Simulator"
 date: "2026-05-20"
 categories: []
-description: 10:25 AMClaude responded: "A Python simulation of a limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker prof…"A Python simulation of a limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker profits."
+description: "A Python simulation of a limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker prof…"A Python simulation of a limit order book with Avellaneda-Stoikov market making, modeling how adverse selection from informed traders erodes market-maker profits."
 draft: true
 ---
 
