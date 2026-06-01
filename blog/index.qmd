@@ -12,4 +12,4 @@ page-layout: full
 title-block-banner: false
 ---
 
-Notes on math, markets, and systems. Mostly unpolished.
+Welcome to my blog! I'll use this space to write about some of the projects I've done, the math behind them, and other things I find interesting!
