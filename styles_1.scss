@@ -818,10 +818,10 @@ body.page-home #title-block-header {
 
 .home-simple {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) 260px;
+  grid-template-columns: minmax(0, 1.1fr) 340px;
   gap: 3.5rem;
   align-items: center;
-  max-width: 860px;
+  max-width: 940px;
 }
 
 .home-text h1 {
@@ -867,12 +867,13 @@ body.page-home #title-block-header {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 68%;   /* ← ADD THIS LINE */
   border: 1px solid $rule;
   filter: grayscale(10%);
 }
 
 .home-photo-placeholder {
-  width: 260px;
+  width: 340px;
   aspect-ratio: 4 / 5;
   border: 1px solid $rule;
   background:
@@ -894,6 +895,6 @@ body.page-home #title-block-header {
 
   .home-photo-wrap,
   .home-photo-placeholder {
-    width: min(260px, 100%);
+    width: min(340px, 100%);
   }
 }
